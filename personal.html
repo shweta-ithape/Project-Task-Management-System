@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Personal Tasks</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <div class="container">
+        <div class="stats-container">
+            <div class="details">
+                <h1>Personal Tasks</h1>
+                <p>Stay on top of your personal goals!</p>
+                <div id="progressBar">
+                    <div id="progress"></div>
+                </div>
+            </div>
+            <div class="stats-numbers">
+                <p id="numbers">0 / 0</p>
+            </div>
+        </div>
+        <form id="taskForm">
+            <input type="text" id="taskInput" placeholder="Add a personal task" required>
+            <button type="submit">+</button>
+        </form>
+        <ul class="task-list" id="taskList"></ul>
+    </div>
+    <script src="script.js" data-task-type="personal"></script>
+</body>
+</html>

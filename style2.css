@@ -1,0 +1,233 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --background: #000430;
+    --secondaryBackground: #171c48;
+    --text: #fff;
+    --purple: #828dff;
+    --teal: #24feee;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--text);
+    font-family: Arial, sans-serif;
+}
+
+/* Container */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 120px;
+    max-width: 100%;
+}
+
+/* Stats Section */
+.stats-container {
+    padding: 30px;
+    border-radius: 20px;
+    border: 2px solid var(--purple);
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    width: 550px;
+}
+
+.details {
+    width: 100%;
+}
+
+#progressBar {
+    width: 100%;
+    height: 10px;
+    background-color: var(--secondaryBackground);
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+#progress {
+    width: 50%;
+    height: 10px;
+    background-color: var(--teal);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+#numbers {
+    width: 100px;
+    height: 100px;
+    background-color: var(--purple);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/* Form Section */
+form {
+    margin-top: 60px;
+    width: 80%;
+    display: flex;
+    gap: 10px;
+}
+
+input {
+    flex: 1;
+    padding: 16px;
+    background: var(--secondaryBackground);
+    border: 1px solid var(--purple);
+    border-radius: 10px;
+    outline: none;
+    color: var(--text);
+    font-size: 16px;
+}
+
+button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--purple);
+    color: var(--text);
+    font-size: 30px;
+    font-weight: bold;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Task List */
+.task-list {
+    width: 80%;
+    margin-top: 20px;
+    list-style-type: none;
+}
+
+.taskItem {
+    background-color: var(--secondaryBackground);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    border: 1px solid var(--purple);
+}
+
+.task-content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: gray;
+}
+
+.icons {
+    display: flex;
+    gap: 5px;
+}
+
+.icons button {
+    width: 25px;
+    height: 25px;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+/* Timer text */
+.timer-text {
+    font-size: 12px;
+    color: gray;
+    margin-left: 10px;
+}
+
+/* Greeting Section */
+.greeting-container {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.greeting-container h2 {
+    font-size: 50px;
+    color: var(--teal);
+}
+
+.greeting-container p {
+    margin-top: 15px;
+    font-size: 20px;
+    font-style: italic;
+    color: var(--text);
+}
+
+/* Mood Section */
+.mood-check {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 30px;
+}
+
+.emojis {
+    margin-top: 19px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 55px;
+    cursor: pointer;
+}
+
+.emojis span:hover {
+    transform: scale(1.2);
+    transition: transform 0.2s ease;
+}
+
+#mood-message {
+    margin-top: 10px;
+    font-size: 20px;
+    color: var(--teal);
+}
+
+/* Navigation Buttons Section */
+.nav-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px; /* increased spacing between buttons */
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.nav-buttons a {
+    text-decoration: none;
+}
+
+.nav-buttons button {
+    padding: 4px 42px; /* more space inside buttons */
+    font-size: 20px;
+    border-radius: 13px;
+    background-color: var(--purple);
+    color: var(--text);
+    border: 27px solid transparent;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.nav-buttons button:hover {
+    background-color: var(--teal);
+    color: #000;
+    border-color: var(--teal);
+    transform: translateY(-3px);
+}

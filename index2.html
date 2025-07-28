@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Task Manager - Home</title>
+  <link rel="stylesheet" href="style2.css"/>
+  <style>
+    .calendar-tab-btn {
+      margin-top: 10px;
+      background-color: #24feee;
+      color: #000430;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 10px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .calendar-tab-btn:hover {
+      background-color: #828dff;
+      color: white;
+    }
+
+    .calendar-frame {
+      display: none;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="greeting-container">
+      <h2 id="greeting">Hello!</h2>
+      <p id="quote">"Small steps every day lead to big results. Keep going!"</p>
+    </div>
+
+    <div class="mood-check">
+      <p>How are you feeling today?</p>
+      <div class="emojis">
+        <span data-mood="happy">😃</span>
+        <span data-mood="neutral">😐</span>
+        <span data-mood="sad">😟</span>
+      </div>
+      <p id="mood-message"></p>
+
+      <div class="nav-buttons">
+        <a href="personal.html"><button>Personal Tasks</button></a>
+        <a href="professional.html"><button>Professional Tasks</button></a>
+        <a href="home.html"><button>Live News</button></a>
+        
+        <!-- ✅ Google Calendar Toggle Button -->
+        <button class="calendar-tab-btn" id="toggleCalendar">Google Calendar</button>
+      </div>
+
+      <!-- ✅ Hidden Calendar Frame -->
+      <div class="calendar-frame" id="calendarFrame">
+        <iframe 
+          src="https://calendar.google.com/calendar/embed?src=your_calendar_id%40group.calendar.google.com&ctz=Asia%2FKolkata" 
+          style="border: 0" 
+          width="100%" 
+          height="600" 
+          frameborder="0" 
+          scrolling="no">
+        </iframe>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    // Show/Hide Calendar on click
+    document.getElementById("toggleCalendar").addEventListener("click", function () {
+      const frame = document.getElementById("calendarFrame");
+      frame.style.display = frame.style.display === "none" ? "block" : "none";
+    });
+  </script>
+</body>
+</html>
